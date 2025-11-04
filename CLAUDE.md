@@ -19,9 +19,55 @@ PMIK-pilot is a Python 3.10-based proof-of-concept implementation for HR data an
 - **Database:** SQLite 3
 - **Data Format:** Excel files (.xlsx) with Korean encoding support
 - **Key Libraries:**
-  - `sqlite3` - Database operations
-  - `pandas` - Data manipulation
-  - `openpyxl` - Excel file handling
+  - `sqlite3` - Database operations (built-in)
+  - `pandas` >= 2.0.0 - Data manipulation
+  - `openpyxl` >= 3.1.0 - Excel file handling
+
+## Environment Setup
+
+### Initial Setup
+
+**Windows:**
+```batch
+setup.bat
+```
+
+**macOS/Linux:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This will:
+1. Verify Python 3.10 installation
+2. Create virtual environment (`venv/`)
+3. Install dependencies from `requirements.txt`
+
+### Activate Virtual Environment
+
+**Windows:**
+```batch
+venv\Scripts\activate
+```
+
+**macOS/Linux:**
+```bash
+source venv/bin/activate
+```
+
+### Verify Setup
+
+```bash
+python check_db.py
+```
+
+### Deactivate Virtual Environment
+
+```bash
+deactivate
+```
+
+**Important:** Always activate the virtual environment before running Python scripts in this project.
 
 ## Database Structure
 
